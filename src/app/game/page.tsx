@@ -7,12 +7,6 @@ axios.defaults.baseURL = "http://localhost:8080";
 export default function Game() {
   const [gameBoard, setGameBoard] = useState([]);
 
-  /*function draw(gameBoard) {
-    gameBoard.map((gb) => {
-      console.log(gb);
-    });
-  }*/
-
   useEffect(() => {
     axios.get("/game").then((gameBoard) => {
       if (gameBoard) {
@@ -53,50 +47,102 @@ export default function Game() {
       <div className="row">
         <div className="red-home">
           <div className="white">
-            <div className="red-home-1"></div>
-            <div className="red-home-2"></div>
-            <div className="red-home-3"></div>
-            <div className="red-home-4"></div>
+            <div className="home">
+              <div className="chip red-home-1"></div>
+            </div>
+            <div className="home">
+              <div className="chip red-home-2"></div>
+            </div>
+            <div className="home">
+              <div className="chip red-home-3"></div>
+            </div>
+            <div className="home">
+              <div className="chip red-home-4"></div>
+            </div>
           </div>
         </div>
         <div className="h-[240] w-[120]">
           <div className="row">
-            <div className="box pos-23"></div>
-            <div className="box pos-24"></div>
-            <div className="box pos-25"></div>
+            <div className="box">
+              <div className="chip pos-23"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-24"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-25"></div>
+            </div>
           </div>
           <div className="row">
-            <div className="box pos-22"></div>
-            <div className="box green green-road-1"></div>
-            <div className="box green pos-26"></div>
+            <div className="box">
+              <div className="chip pos-22"></div>
+            </div>
+            <div className="box green green-road-1">
+              <div className="chip"></div>
+            </div>
+            <div className="box green">
+              <div className="chip pos-26"></div>
+            </div>
           </div>
           <div className="row">
-            <div className="box pos-21"></div>
-            <div className="box green green-road-2"></div>
-            <div className="box pos-27"></div>
+            <div className="box">
+              <div className="chip pos-21"></div>
+            </div>
+            <div className="box green green-road-2">
+              <div className="chip"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-27"></div>
+            </div>
           </div>
           <div className="row">
-            <div className="box pos-20"></div>
-            <div className="box green green-road-3"></div>
-            <div className="box pos-28"></div>
+            <div className="box">
+              <div className="chip pos-20"></div>
+            </div>
+            <div className="box green green-road-3">
+              <div className="chip"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-28"></div>
+            </div>
           </div>
           <div className="row">
-            <div className="box pos-19"></div>
-            <div className="box green green-road-4"></div>
-            <div className="box pos-29"></div>
+            <div className="box">
+              <div className="chip pos-19"></div>
+            </div>
+            <div className="box green green-road-4">
+              <div className="chip"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-29"></div>
+            </div>
           </div>
           <div className="row">
-            <div className="box pos-18"></div>
-            <div className="box green green-road-5"></div>
-            <div className="box pos-30"></div>
+            <div className="box">
+              <div className="chip pos-18"></div>
+            </div>
+            <div className="box green green-road-5">
+              <div className="chip"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-30"></div>
+            </div>
           </div>
         </div>
         <div className="green-home h-[240px] w-[240px]">
           <div className="white">
-            <div className="green-home-1"></div>
-            <div className="green-home-2"></div>
-            <div className="green-home-3"></div>
-            <div className="green-home-4"></div>
+            <div className="home">
+              <div className="chip green-home-1"></div>
+            </div>
+            <div className="home">
+              <div className="chip green-home-2"></div>
+            </div>
+            <div className="home">
+              <div className="chip green-home-3"></div>
+            </div>
+            <div className="home">
+              <div className="chip green-home-4"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -104,55 +150,132 @@ export default function Game() {
       <div className="row">
         <div>
           <div className="row">
-            <div className="box pos-12"></div>
-            <div className="box red pos-13"></div>
-            <div className="box pos-14"></div>
-            <div className="box pos-15"></div>
-            <div className="box pos-16"></div>
-            <div className="box pos-17"></div>
+            <div className="box ">
+              <div className="chip pos-12"></div>
+            </div>
+            <div className="box red">
+              <div className="chip pos-13"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-14"></div>
+            </div>
+            <div className="box">
+              <div className="chip  pos-15"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-16"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-17"></div>
+            </div>
           </div>
           <div className="row">
-            <div className="box pos-11"></div>
-            <div className="box red red-road-1"></div>
-            <div className="box red red-road-2"></div>
-            <div className="box red red-road-3"></div>
-            <div className="box red red-road-4"></div>
-            <div className="box red red-road-5"></div>
+            <div className="box">
+              <div className="chip pos-11"></div>
+            </div>
+            <div className="box red red-road-1">
+              <div className="chip"></div>
+            </div>
+            <div className="box red red-road-2">
+              <div className="chip"></div>
+            </div>
+            <div className="box red red-road-3">
+              <div className="chip"></div>
+            </div>
+            <div className="box red red-road-4">
+              <div className="chip"></div>
+            </div>
+            <div className="box red red-road-5">
+              <div className="chip"></div>
+            </div>
           </div>
           <div className="row">
-            <div className="box pos-10"></div>
-            <div className="box pos-9"></div>
-            <div className="box pos-8"></div>
-            <div className="box pos-7"></div>
-            <div className="box pos-6"></div>
-            <div className="box pos-5"></div>
+            <div className="box">
+              <div className="chip pos-10"></div>
+            </div>
+            <div className="box ">
+              <div className="chip pos-9"></div>
+            </div>
+            <div className="box ">
+              <div className="chip pos-8"></div>
+            </div>
+            <div className="box ">
+              <div className="chip pos-7"></div>
+            </div>
+            <div className="box ">
+              <div className="chip pos-6"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-5"></div>
+            </div>
           </div>
         </div>
-        <div className="winning-section"></div>
+        <div className="winning-section">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
         <div>
           <div className="row">
-            <div className="box pos-31"></div>
-            <div className="box pos-32"></div>
-            <div className="box pos-33"></div>
-            <div className="box pos-34"></div>
-            <div className="box pos-35"></div>
-            <div className="box pos-36"></div>
+            <div className="box">
+              <div className="chip pos-31"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-32"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-33"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-34"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-35"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-36"></div>
+            </div>
           </div>
           <div className="row">
-            <div className="box yellow yellow-road-5"></div>
-            <div className="box yellow yellow-road-4"></div>
-            <div className="box yellow yellow-road-3"></div>
-            <div className="box yellow yellow-road-2"></div>
-            <div className="box yellow yellow-road-1"></div>
-            <div className="box pos-37"></div>
+            <div className="box yellow yellow-road-5">
+              <div className="chip"></div>
+            </div>
+            <div className="box yellow yellow-road-4">
+              <div className="chip"></div>
+            </div>
+            <div className="box yellow yellow-road-3">
+              <div className="chip"></div>
+            </div>
+            <div className="box yellow yellow-road-2">
+              <div className="chip"></div>
+            </div>
+            <div className="box yellow yellow-road-1">
+              <div className="chip"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-37"></div>
+            </div>
           </div>
           <div className="row">
-            <div className="box pos-43"></div>
-            <div className="box pos-42"></div>
-            <div className="box pos-41"></div>
-            <div className="box pos-40"></div>
-            <div className="box yellow pos-39"></div>
-            <div className="box pos-38"></div>
+            <div className="box">
+              <div className="chip pos-43"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-42"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-41"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-40"></div>
+            </div>
+            <div className="box yellow">
+              <div className="chip pos-39"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-38"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -161,51 +284,103 @@ export default function Game() {
         <div className="blue-home h-[240px] w-[240px]">
           {" "}
           <div className="white">
-            <div className="blue-home-1"></div>
-            <div className="blue-home-2"></div>
-            <div className="blue-home-3"></div>
-            <div className="blue-home-4"></div>
+            <div className="home">
+              <div className="chip blue-home-1"></div>
+            </div>
+            <div className="home">
+              <div className="chip blue-home-2"></div>
+            </div>
+            <div className="home">
+              <div className="chip blue-home-3"></div>
+            </div>
+            <div className="home">
+              <div className="chip blue-home-4"></div>
+            </div>
           </div>
         </div>
         <div>
           <div className="row">
-            <div className="box pos-5"></div>
-            <div className="box blue blue-road-5"></div>
-            <div className="box pos-44"></div>
+            <div className="box">
+              <div className="chip pos-5"></div>
+            </div>
+            <div className="box blue blue-road-5">
+              <div className="chip"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-44"></div>
+            </div>
           </div>
           <div className="row">
-            <div className="box pos-4"></div>
-            <div className="box blue blue-road-4"></div>
-            <div className="box pos-45"></div>
+            <div className="box">
+              <div className="chip pos-4"></div>
+            </div>
+            <div className="box blue blue-road-4">
+              <div className="chip"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-45"></div>
+            </div>
           </div>
           <div className="row">
-            <div className="box pos-3"></div>
-            <div className="box blue blue-road-3"></div>
-            <div className="box pos-46"></div>
+            <div className="box">
+              <div className="chip pos-3"></div>
+            </div>
+            <div className="box blue blue-road-3">
+              <div className="chip"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-46"></div>
+            </div>
           </div>
           <div className="row">
-            <div className="box pos-2"></div>
-            <div className="box blue blue-road-2"></div>
-            <div className="box pos-47"></div>
+            <div className="box">
+              <div className="chip pos-2"></div>
+            </div>
+            <div className="box blue blue-road-2">
+              <div className="chip"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-47"></div>
+            </div>
           </div>
           <div className="row">
-            <div className="box blue pos-1"></div>
-            <div className="box blue blue-road-1"></div>
-            <div className="box pos-48"></div>
+            <div className="box blue">
+              <div className="chip pos-1"></div>
+            </div>
+            <div className="box blue blue-road-1">
+              <div className="chip"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-48"></div>
+            </div>
           </div>
           <div className="row">
-            <div className="box pos-51"></div>
-            <div className="box pos-50"></div>
-            <div className="box pos-49"></div>
+            <div className="box">
+              <div className="chip pos-51"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-50"></div>
+            </div>
+            <div className="box">
+              <div className="chip pos-49"></div>
+            </div>
           </div>
         </div>
         <div className="yellow-home  h-[240px] w-[240px]">
           {" "}
           <div className="white">
-            <div className="yellow-home-1"></div>
-            <div className="yellow-home-2"></div>
-            <div className="yellow-home-3"></div>
-            <div className="yellow-home-4"></div>
+            <div className="home">
+              <div className="chip yellow-home-1"></div>
+            </div>
+            <div className="home">
+              <div className="chip yellow-home-2"></div>
+            </div>
+            <div className="home">
+              <div className="chip yellow-home-3"></div>
+            </div>
+            <div className="home">
+              <div className="chip yellow-home-4"></div>
+            </div>
           </div>
         </div>
       </div>
