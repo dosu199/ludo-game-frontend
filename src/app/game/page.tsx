@@ -2,18 +2,29 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "../styles/gameBoard.css";
-axios.defaults.baseURL = "http://localhost:8080";
+import Home from "./home";
+axios.defaults.baseURL = "http://localhost:9090";
 
 export default function Game() {
-  const [gameBoard, setGameBoard] = useState([]);
+  const [gameBoardData, setGameBoardData] = useState();
+  const [gameState, setGameState] = useState();
+  let gb;
 
   useEffect(() => {
-    axios.get("/game").then((gameBoard) => {
-      if (gameBoard) {
-        console.log(gameBoard.data);
+    axios.get("/rollDice").then((gameBoard) => {
+      if (gameBoard.data) {
+        setGameState(gameBoard.data);
+        //setGameBoardData(gameBoard.data);
+        //console.log(gameBoard.data.map((gb) => gb.));
+        if (gameBoard.data) gb = gameBoard.data;
+
+        console.log(gameState.bluePawns);
+        console.log(2);
+      }
+
+      /* if (gameBoard) {
         let i = 1;
         gameBoard.data.map((gb, index) => {
-          console.log(index);
           if (gb.road == "home") {
             document.getElementsByClassName(
               `${gb.color}-home-${i}`
@@ -38,12 +49,13 @@ export default function Game() {
             )[0].style.backgroundColor = `${gb.color}`;
           }
         });
-      }
+      } */
     });
   }, []);
 
   return (
     <div className="board">
+      <Home pawns={gameState ? gameState.bluePawns : undefined} />
       <div className="row">
         <div className="red-home">
           <div className="white">
